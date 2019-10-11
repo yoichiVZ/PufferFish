@@ -1,13 +1,14 @@
 #include"Player.h"
 
 Player::Player() {
-	gh = LoadGraph("Resourse\\enemy2.png");
+	gh = LoadGraph("Resourse\\Image\\Player.png");
 	GetGraphSize(gh, &width, &height);
+	width *= 2, height *= 2;
 
 	moveState = IDLE;
 	space = 0;
-	posX = 860 / 2;
-	posY = 640 / 2;
+	posX = 1200 / 2;
+	posY = 800 / 2;
 	gravity = 1;
 	buoyancy = 1;
 	vecY = 0;
