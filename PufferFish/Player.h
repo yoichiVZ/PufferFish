@@ -10,7 +10,7 @@ private:
 		JUMP,
 	};
 	MoveState moveState; // 現在の状態
-	float posX, posY; // 位置
+	int posX, posY; // 位置
 	float vecY; // 進行方向決定
 	float gravity; // 重力
 	float buoyancy; // 浮力
@@ -19,6 +19,7 @@ private:
 	int gh; // グラフィックハンドル格納
 	int space; // スペース判定用
 	bool landingOnth; //着水判定
+	int life; //hp
 public:
 	Player();
 	void Init();
@@ -26,4 +27,9 @@ public:
 	void Draw();
 	void All();
 	void PushSpace();
+	int GetPosX();
+	int GetPosY();
+	int GetWidth();
+	int GetHeight();
+	bool Damage();
 };

@@ -14,10 +14,11 @@ Player::Player() {
 	vecY = 0;
 	diveSpeed = 4;
 	landingOnth = false;
+	life = 3;
 }
 
 void Player::Init() {
-
+	posY = 0;
 }
 
 void Player::Move() {
@@ -28,7 +29,7 @@ void Player::Move() {
 	if (space < 0) {
 		moveState = JUMP;
 	}
-	if (posY > 640 / 2) {
+	if (posY > 800 / 2) {
 		if (moveState == JUMP) {
 			if (landingOnth) {
 				moveState = IDLE;
@@ -43,7 +44,7 @@ void Player::Move() {
 			}
 		}
 	}
-	if (posY < 640 / 2) {
+	if (posY < 800 / 2) {
 		if (moveState == JUMP) {
 			vecY += gravity;
 			landingOnth = true;
@@ -87,4 +88,28 @@ void Player::PushSpace() {
 	else {
 		space++; //‰Ÿ‚³‚ê‚Ä‚¢‚é
 	}
+}
+
+int Player::GetPosX() {
+	return posX;
+}
+
+int Player::GetPosY() {
+	return posY;
+}
+
+int Player::GetWidth() {
+	return width;
+}
+
+int Player::GetHeight() {
+	return height;
+}
+
+bool Player::Damage() {
+	if (life > 0)
+		life -= 1;
+	if (life <= 0)
+		return true;
+	return false;
 }

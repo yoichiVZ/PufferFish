@@ -1,6 +1,2 @@
 ﻿  GameControl.cpp
-  Player.cpp
-c:\k018a1698\チーム制作関連\2年gamejame\第二回\pufferfish\player.cpp(70): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  main.cpp
-  コードを生成中...
   PufferFish.vcxproj -> C:\K018A1698\チーム制作関連\2年gamejame\第二回\PufferFish\Debug\PufferFish.exe
