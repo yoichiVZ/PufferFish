@@ -12,5 +12,5 @@ public:
 	Background();
 	void SeaDraw();
 	void SeaCoverDraw();
-	void Move();
+	void Move(bool);
 };

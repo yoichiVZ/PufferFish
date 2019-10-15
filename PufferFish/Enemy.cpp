@@ -6,8 +6,8 @@ Enemy::Enemy() {
 	width *= 2, height *= 2;
 
 	posX = 1200;
-	posY = 400;
-	speed = 1;
+	posY = 700;
+	speed = 2;
 }
 
 void Enemy::Init() {
@@ -16,7 +16,7 @@ void Enemy::Init() {
 
 void Enemy::Move() {
 	posX -= speed;
-	if (posX <= -50)
+	if (posX <= -70)
 		posX = 1200;
 }
 

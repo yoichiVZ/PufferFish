@@ -2,6 +2,8 @@
 
 #include"DxLib.h"
 
+const static int UNTIL_STATRT = 12;
+
 class Player {
 private:
 	enum MoveState {
@@ -20,6 +22,12 @@ private:
 	int space; // スペース判定用
 	bool landingOnth; //着水判定
 	int life; //hp
+	int diveStart; //ダイブをするまでの時間
+	bool dash; //ダッシュ用
+	int flashCount; //点滅用カウント
+	int flashFlag; //点滅用フラグ
+	int mutekiCount; //無敵処理用カウント
+	bool mutekiFlag; //無敵処理用フラグ
 public:
 	Player();
 	void Init();
@@ -32,4 +40,8 @@ public:
 	int GetWidth();
 	int GetHeight();
 	bool Damage();
+	bool IsDash();
+	void FlashFlagOn();
+	void MutekiOn();
+	bool MutekiNow();
 };

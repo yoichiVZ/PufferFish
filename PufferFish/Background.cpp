@@ -1,7 +1,7 @@
 #include"Background.h"
 
 Background::Background() {
-	seaGh = LoadGraph("Resourse\\Image\\haikei1.png");
+	seaGh = LoadGraph("Resourse\\Image\\Haikei.png");
 	GetGraphSize(seaGh, &seaWidth, &seaHeight);
 	seaWidth *= 2, seaHeight *= 2;
 	seaCoverGh = LoadGraph("Resourse\\Image\\haikei2.png");
@@ -10,7 +10,7 @@ Background::Background() {
 
 	posX = 0;
 	posY = 0;
-	scrollSpeed = 1;
+	scrollSpeed = 2;
 }
 
 void Background::SeaDraw() {
@@ -25,8 +25,11 @@ void Background::SeaCoverDraw() {
 	DrawExtendGraph(posX + seaCoverWidth, posY, posX + seaCoverWidth + seaCoverWidth, posY + seaCoverHeight, seaCoverGh, true);
 }
 
-void Background::Move() {
-	posX -= scrollSpeed;
+void Background::Move(bool dash) {
+	if (!dash)
+		posX -= scrollSpeed;
+	if (dash)
+		posX -= (scrollSpeed * 3);
 	if (posX <= -seaWidth) {
 		posX = 0;
 	}
