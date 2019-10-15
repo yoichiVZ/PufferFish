@@ -20,6 +20,7 @@ void GameControl::Game() {
 	bg->Move();
 
 	//当たり判定
+	//プレイヤーとエネミー
 	if (pl->GetPosX() > en->GetPosX() &&
 		pl->GetPosX() < en->GetPosX() + en->GetWidth() &&
 		pl->GetPosY() > en->GetPosY() &&
