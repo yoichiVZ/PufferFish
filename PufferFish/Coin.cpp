@@ -9,6 +9,9 @@ Coin::Coin() {
 	spawnTiming5[0] = 0;
 	spawnTiming8[0] = 0;
 	spawnTiming6[0] = 60;
+	spawnTiming4[0] = 120;
+	spawnTiming4[1] = 180;
+	spawnTiming4[2] = 240;
 
 	posX = 0;
 	posY = 0;
@@ -19,7 +22,7 @@ Coin::Coin() {
 void Coin::Move() {
 	posX -= speed;
 	if (posX < -50)
-		posX = 1200;
+		live = false;
 }
 
 void Coin::Draw() {
@@ -136,53 +139,53 @@ bool Coin::GetLive() {
 	return live;
 }
 
-void Coin::AllSetPosition(int gameTime) {
-	for (int i = 0; i < COIN_NUM; i++) {
-		if (!live) {
-			SetPosition1(gameTime);
-			break;
-		}
-	}
-	for (int i = 0; i < COIN_NUM; i++) {
-		if (!live) {
-			SetPosition2(gameTime);
-			break;
-		}
-	}
-	for (int i = 0; i < COIN_NUM; i++) {
-		if (!live) {
-			SetPosition3(gameTime);
-			break;
-		}
-	}
-	for (int i = 0; i < COIN_NUM; i++) {
-		if (!live) {
-			SetPosition4(gameTime);
-			break;
-		}
-	}
-	for (int i = 0; i < COIN_NUM; i++) {
-		if (!live) {
-			SetPosition5(gameTime);
-			break;
-		}
-	}
-	for (int i = 0; i < COIN_NUM; i++) {
-		if (!live) {
-			SetPosition6(gameTime);
-			break;
-		}
-	}
-	for (int i = 0; i < COIN_NUM; i++) {
-		if (!live) {
-			SetPosition7(gameTime);
-			break;
-		}
-	}
-	for (int i = 0; i < COIN_NUM; i++) {
-		if (!live) {
-			SetPosition8(gameTime);
-			break;
-		}
-	}
-}
+//void Coin::AllSetPosition(int gameTime) {
+//	for (int i = 0; i < COIN_NUM; i++) {
+//		if (!live) {
+//			SetPosition1(gameTime);
+//			break;
+//		}
+//	}
+//	for (int i = 0; i < COIN_NUM; i++) {
+//		if (!live) {
+//			SetPosition2(gameTime);
+//			break;
+//		}
+//	}
+//	for (int i = 0; i < COIN_NUM; i++) {
+//		if (!live) {
+//			SetPosition3(gameTime);
+//			break;
+//		}
+//	}
+//	for (int i = 0; i < COIN_NUM; i++) {
+//		if (!live) {
+//			SetPosition4(gameTime);
+//			break;
+//		}
+//	}
+//	for (int i = 0; i < COIN_NUM; i++) {
+//		if (!live) {
+//			SetPosition5(gameTime);
+//			break;
+//		}
+//	}
+//	for (int i = 0; i < COIN_NUM; i++) {
+//		if (!live) {
+//			SetPosition6(gameTime);
+//			break;
+//		}
+//	}
+//	for (int i = 0; i < COIN_NUM; i++) {
+//		if (!live) {
+//			SetPosition7(gameTime);
+//			break;
+//		}
+//	}
+//	for (int i = 0; i < COIN_NUM; i++) {
+//		if (!live) {
+//			SetPosition8(gameTime);
+//			break;
+//		}
+//	}
+//}

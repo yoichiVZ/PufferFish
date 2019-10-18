@@ -3,7 +3,7 @@
 #include"DxLib.h"
 
 const static int COIN_NUM = 10;
-const static int COIN_ALLNUM = 2;
+const static int COIN_ALLNUM = 10;
 
 class Coin {
 private:
@@ -39,5 +39,5 @@ public:
 	void SetPosition7(int);
 	void SetPosition8(int);
 	bool GetLive();
-	void AllSetPosition(int);
+	//void AllSetPosition(int);
 };

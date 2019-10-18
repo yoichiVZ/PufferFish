@@ -26,7 +26,52 @@ GameControl::~GameControl() {
 
 void GameControl::Game() {
 	for (int i = 0; i < COIN_NUM; i++) {
-		coin[i]->AllSetPosition(gameTime);
+		if (!coin[i]->GetLive()) {
+			coin[i]->SetPosition1(gameTime);
+			break;
+		}
+	}
+	for (int i = 0; i < COIN_NUM; i++) {
+		if (!coin[i]->GetLive()) {
+			coin[i]->SetPosition2(gameTime);
+			break;
+		}
+	}
+	for (int i = 0; i < COIN_NUM; i++) {
+		if (!coin[i]->GetLive()) {
+			coin[i]->SetPosition3(gameTime);
+			break;
+		}
+	}
+	for (int i = 0; i < COIN_NUM; i++) {
+		if (!coin[i]->GetLive()) {
+			coin[i]->SetPosition4(gameTime);
+			break;
+		}
+	}
+	for (int i = 0; i < COIN_NUM; i++) {
+		if (!coin[i]->GetLive()) {
+			coin[i]->SetPosition5(gameTime);
+			break;
+		}
+	}
+	for (int i = 0; i < COIN_NUM; i++) {
+		if (!coin[i]->GetLive()) {
+			coin[i]->SetPosition6(gameTime);
+			break;
+		}
+	}
+	for (int i = 0; i < COIN_NUM; i++) {
+		if (!coin[i]->GetLive()) {
+			coin[i]->SetPosition7(gameTime);
+			break;
+		}
+	}
+	for (int i = 0; i < COIN_NUM; i++) {
+		if (!coin[i]->GetLive()) {
+			coin[i]->SetPosition8(gameTime);
+			break;
+		}
 	}
 
 	bg->SeaDraw();
